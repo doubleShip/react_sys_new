@@ -1,0 +1,121 @@
+//////////////////////////////
+///////颜色配置
+//////////////////////////////
+@mainColor : #6887ff;//主色
+@secondColor : #1ac3fe;//辅色
+@thirdColor : #9fd01d;
+@white : #ffffff;
+@black : #191919;
+@success : #0acc0e;
+@warn : #f5aa41;
+@error : #ff2213;
+@info : @mainColor;
+@gray : #757575;
+@notice : #ff432e;
+@disabled : #707070;
+
+@primary : @mainColor;
+@primaryDark : darken(@mainColor,10%);
+@primaryLight : lighten(@mainColor, 10%);
+
+@second : @secondColor;
+@secondDark : darken(@secondColor,10%);
+@secondLight : lighten(@secondColor, 10%);
+
+@third : @thirdColor;
+@thirdDark : darken(@thirdColor,10%);
+@thirdLight : lighten(@thirdColor, 10%);
+
+@successDark : darken(@success,10%);
+@successLight : lighten(@success, 10%);
+
+@warnDark : darken(@warn,10%);
+@warnLight : lighten(@warn, 10%);
+
+@grayDark : darken(@gray,10%);
+@grayLight : lighten(@gray, 40%);
+
+/////背景
+@body-bg-color : #000;
+@body-font-color : #747476;
+
+//间距大小
+@spacer: 1rem;
+
+//////////////////////////////
+///////属性配置
+//////////////////////////////
+//边距设置
+@margin-small: @spacer * 0.5;
+@margin-normal: @spacer * 1;
+@margin-large: @spacer * 2;
+
+@padding-small: @spacer * 0.5;
+@padding-normal: @spacer * 1;
+@padding-large: @spacer * 2;
+
+//行距
+@lineHeight-small: 1.5;
+@lineHeight-normal: 1.8;
+@lineHeight-large: 2;
+
+//z-index
+@zIndex1           : 1;
+@zIndex10          : 10;
+@zIndex100         : 100;
+@zIndexHead        : 1000;
+@zIndexModalShadow : 1040;
+@zIndexModal       : 1050;
+@zIndexMask        : 2000;
+
+//圆角
+@border-radius-small: 2px;
+@border-radius-normal: 4px;
+@border-radius-large: 10px;
+
+//边框
+@border-size-small : 1px;
+@border-size-normal : 2px;
+@border-size-large : 5px;
+
+@border-gray : lighten(@gray,35%);
+@border-gray-light : #ebebeb;
+@border-primary : #4b4744;
+
+//字体
+@font-family: "sans-serif, Microsoft JhengHei", "SimHei", "Microsoft YaHei";
+@font-size-small : ceil((@font-size-normal * 0.85)); // ~12px; //提示
+@font-size-normal : 14px; //正文
+@font-size-large : 16px;
+
+@font-size-h1:            floor((@font-size-normal * 2.15)); // ~30px
+@font-size-h2:            floor((@font-size-normal * 1.85)); // ~26px
+@font-size-h3:            ceil((@font-size-normal * 1.57)); // ~22px
+@font-size-h4:            ceil((@font-size-normal * 1.25)); // ~18px
+@font-size-h5:            @font-size-normal;
+@font-size-h6:            ceil((@font-size-normal * 0.85)); // ~12px
+
+//媒体查询
+//@screen-xs:                  480px;
+//@screen-xs-min:              @screen-xs;
+//@screen-phone:               @screen-xs-min;
+//
+//@screen-sm:                  768px;
+//@screen-sm-min:              @screen-sm;
+//@screen-tablet:              @screen-sm-min;
+//
+//@screen-md:                  992px;
+//@screen-md-min:              @screen-md;
+//@screen-desktop:             @screen-md-min;
+//
+//@screen-lg:                  1200px;
+//@screen-lg-min:              @screen-lg;
+//@screen-lg-desktop:          @screen-lg-min;
+//
+//@screen-xlg:                  1300px;
+//@screen-xlg-min:              @screen-lg;
+//@screen-xlg-desktop:          @screen-lg-min;
+//
+//@screen-xs-max:              (@screen-sm-min - 1);
+//@screen-sm-max:              (@screen-md-min - 1);
+//@screen-md-max:              (@screen-lg-min - 1);
