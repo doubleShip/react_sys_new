@@ -24,30 +24,35 @@ const initState = fromJS({
 })
 
 export const reducer = (state = initState, action) => {
-	switch (action.type) {
-		case TYPES.FETCH_SUCCEED:
-			return state.merge({
-                data: action.data,
-                error: '',
-                isFetching: false,
-                isFailed: false
-            })
-		case TYPES.FETCH_FAILED:
-			return state.merge({
-				data: action.data,
-				error: action.error,
-				isFetching: false,
-				isFailed: true
-			});
-		case TYPES.FETCH_REQUEST:
-			return state.merge({
-				data: null,
-				error: '',
-				isFetching: true,
-				isFailed: false
-			});
+    if(action.showLoading) {
+        switch (action.type) {
+            case TYPES.FETCH_SUCCEED:
+                return state.merge({
+                    data: action.data,
+                    error: '',
+                    isFetching: false,
+                    isFailed: false
+                })
+            case TYPES.FETCH_FAILED:
+                return state.merge({
+                    data: action.data,
+                    error: action.error,
+                    isFetching: false,
+                    isFailed: true
+                });
+            case TYPES.FETCH_REQUEST:
+                return state.merge({
+                    data: null,
+                    error: '',
+                    isFetching: true,
+                    isFailed: false
+                });
 
-		default:
-			return state
-	}
+            default:
+                return state
+        }
+    }
+    else {
+        return state
+    }
 }

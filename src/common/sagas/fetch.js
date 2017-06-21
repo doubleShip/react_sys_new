@@ -15,7 +15,14 @@ export function getData(url) {
 export function* fetchData(action) {
 	try {
 		const data = yield call(getData,action.url);
-		yield put({type: FT.FETCH_SUCCEED, data});
+		if(action.showLoading) {
+			yield put({
+                type: FT.FETCH_SUCCEED,
+                data,
+                showLoading: action.showLoading
+            });
+		}
+
         console.log("============request data==============");
         console.log(data);
 
@@ -30,7 +37,13 @@ export function* fetchData(action) {
 			});
 		}
 	} catch (error) {
-		yield put({type: FT.FETCH_FAILED, error: error.toString()});
+        if(action.showLoading) {
+            yield put({
+                type: FT.FETCH_FAILED,
+                error: error.toString(),
+                showLoading: action.showLoading
+            });
+        }
 		yield put({ //弹出请求失败提示
 			type: AT.SET_INFO,
 			value: true,

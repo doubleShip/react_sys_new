@@ -88,6 +88,7 @@ export default class Music extends React.Component {
             url : HTTP_SERVER.getMusicList.url.formatHttpUrl({typeId:typeId}),
             method : HTTP_SERVER.getMusicList.method,
             //successInfo : "信息请求成功",
+            showLoading : true,
             successAction : TT.SET_MUSIC_LIST
         }))
     }
